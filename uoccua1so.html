@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ước của số</title>
+</head>
+<body>
+<input type="number" id="a"/>
+<button onclick="count()">tìm số</button>
+<p id="count"> </p>
+<script>
+    function count() {
+        let j = 0;
+        document.getElementById('count').innerHTML= "";
+        let a = parseInt(document.getElementById('a').value);
+        if (a < 0)
+            document.getElementById('count').innerHTML = "số này không hợp lệ";
+        else {
+            for (let d = 2 ;d <= a ; d++) {
+                if (a % d == 0) {
+                    j++;
+                }
+            }
+            document.getElementById('count').innerHTML = j
+        }
+
+        
+    }
+</script>
+</body>
+</html>
